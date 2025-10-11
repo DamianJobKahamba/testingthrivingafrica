@@ -1115,7 +1115,6 @@ body {
   .videos-grid {
     grid-template-columns: 1fr;
   }
-}
 
 @media (max-width: 480px) {
   /* Mobile optimizations for CV template selection */
@@ -1140,4 +1139,24 @@ body {
   .preview-text {
     font-size: 1.1rem;
   }
+
+  .template-image-placeholder{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;      /* or remove this and set a fixed height, e.g., height: 220px; */
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eef2f7;
 }
+
+.template-image{
+  position: absolute;
+  inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* fill and crop to maintain aspect */
+  display: block;
+}
+}
+
+
