@@ -1179,6 +1179,7 @@ img.template-image {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: start;
+  grid-auto-flow: dense;
 }
 
 .cv-template-card[data-level="beginner"] { grid-column: 1; }
