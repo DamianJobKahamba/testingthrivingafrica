@@ -1169,7 +1169,7 @@ body {
 img.template-image {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover; /* fill the box and crop overflow */
+  object-fit: contain; /* fill the box and crop overflow */
   display: block;
 }
 
