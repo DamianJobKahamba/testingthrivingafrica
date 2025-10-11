@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your CV - Thriving Africa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     Navigation 
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/thriving-africa-logo.png" alt="Thriving Africa Logo" class="logo-image">
+                <span class="logo-text">Thriving Africa</span>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="build-cv.html" class="nav-link nav-link-special active">Build CV</a></li>
+                <li><a href="index.html#videos" class="nav-link">Videos</a></li>
+                <li><a href="index.html#opportunities" class="nav-link">Opportunities</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+     CV Builder Section 
+    <section class="cv-builder">
+        <div class="container">
+            <div class="cv-builder-header">
+                <h1 class="page-title">Build Your Professional CV</h1>
+                <p class="page-subtitle">Create a standout CV that opens doors to global opportunities</p>
+            </div>
+
+            <div class="cv-builder-content">
+                <div class="cv-form-container">
+                    <form id="cvForm" class="cv-form">
+                         Personal Information 
+                        <div class="form-section">
+                            <h2 class="form-section-title">Personal Information</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location (City, Country) *</label>
+                                <input type="text" id="location" name="location" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn Profile</label>
+                                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                            </div>
+                        </div>
+
+                         Professional Summary 
+                        <div class="form-section">
+                            <h2 class="form-section-title">Professional Summary</h2>
+                            <div class="form-group">
+                                <label for="summary">Brief Summary *</label>
+                                <textarea id="summary" name="summary" rows="4" required placeholder="Write a compelling summary of your professional background and career goals..."></textarea>
+                            </div>
+                        </div>
+
+                         Education 
+                        <div class="form-section">
+                            <h2 class="form-section-title">Education</h2>
+                            <div id="educationContainer">
+                                <div class="education-entry">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="degree1">Degree *</label>
+                                            <input type="text" id="degree1" name="degree1" required placeholder="e.g., Bachelor of Science">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="institution1">Institution *</label>
+                                            <input type="text" id="institution1" name="institution1" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="eduYear1">Year of Graduation *</label>
+                                            <input type="text" id="eduYear1" name="eduYear1" required placeholder="e.g., 2024">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gpa1">GPA/Grade</label>
+                                            <input type="text" id="gpa1" name="gpa1" placeholder="e.g., 3.8/4.0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="add-button" id="addEducation">+ Add Another Degree</button>
+                        </div>
+
+                         Work Experience 
+                        <div class="form-section">
+                            <h2 class="form-section-title">Work Experience</h2>
+                            <div id="experienceContainer">
+                                <div class="experience-entry">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="jobTitle1">Job Title *</label>
+                                            <input type="text" id="jobTitle1" name="jobTitle1" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="company1">Company *</label>
+                                            <input type="text" id="company1" name="company1" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="startDate1">Start Date *</label>
+                                            <input type="text" id="startDate1" name="startDate1" required placeholder="e.g., Jan 2022">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="endDate1">End Date</label>
+                                            <input type="text" id="endDate1" name="endDate1" placeholder="Present or Month Year">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="jobDescription1">Description *</label>
+                                        <textarea id="jobDescription1" name="jobDescription1" rows="3" required placeholder="Describe your responsibilities and achievements..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="add-button" id="addExperience">+ Add Another Position</button>
+                        </div>
+
+                         Skills 
+                        <div class="form-section">
+                            <h2 class="form-section-title">Skills</h2>
+                            <div class="form-group">
+                                <label for="skills">List Your Skills *</label>
+                                <textarea id="skills" name="skills" rows="3" required placeholder="e.g., Project Management, Data Analysis, Python, Communication, Leadership (separate with commas)"></textarea>
+                            </div>
+                        </div>
+
+                         Languages 
+                        <div class="form-section">
+                            <h2 class="form-section-title">Languages</h2>
+                            <div class="form-group">
+                                <label for="languages">Languages & Proficiency *</label>
+                                <textarea id="languages" name="languages" rows="2" required placeholder="e.g., English (Fluent), French (Intermediate), Swahili (Native)"></textarea>
+                            </div>
+                        </div>
+
+                         Certifications 
+                        <div class="form-section">
+                            <h2 class="form-section-title">Certifications & Awards (Optional)</h2>
+                            <div class="form-group">
+                                <label for="certifications">List Any Certifications or Awards</label>
+                                <textarea id="certifications" name="certifications" rows="3" placeholder="e.g., Google Data Analytics Certificate, Dean's List 2023"></textarea>
+                            </div>
+                        </div>
+
+                         Submit Buttons 
+                        <div class="form-actions">
+                            <button type="button" class="preview-button" id="previewCV">Preview CV</button>
+                            <button type="submit" class="submit-button">Generate CV</button>
+                        </div>
+                    </form>
+                </div>
+
+                 CV Preview 
+                <div class="cv-preview-container" id="cvPreview">
+                    <div class="cv-preview-header">
+                        <h3>CV Preview</h3>
+                        <p>Fill out the form to see your CV preview</p>
+                    </div>
+                    <div class="cv-preview-content" id="cvPreviewContent">
+                         Preview will be generated here 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Footer 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/thriving-africa-logo.png" alt="Thriving Africa Logo" class="footer-logo-image">
+                    <span>Thriving Africa</span>
+                </div>
+                <p class="footer-tagline">Empowering African talent for global success</p>
+                <p class="footer-copyright">&copy; 2025 Thriving Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cv-builder.js"></script>
+</body>
+</html>
