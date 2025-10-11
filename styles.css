@@ -818,125 +818,182 @@ body {
   font-size: 0.9rem;
 }
 
-/* ===== CV Builder Styles ===== */
-.cv-builder {
-  padding: calc(70px + var(--spacing-lg)) 0 var(--spacing-xl);
-  background: var(--color-background);
-  min-height: 100vh;
+/* ============================================
+   CV TEMPLATE SELECTION PAGE STYLES
+   ============================================ */
+
+/* Updated CV Template Selection Section with proper spacing and integration */
+.cv-template-selection {
+  min-height: calc(100vh - 70px);
+  padding: 140px 0 80px;
+  background: linear-gradient(135deg, var(--color-background) 0%, #e8f4ff 100%);
 }
 
-.cv-builder-header {
+.cv-selection-header {
   text-align: center;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 60px;
+  animation: fadeInUp 0.8s ease-out;
 }
 
-.page-title {
+.industry-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.page-subtitle {
-  font-size: 1.2rem;
-  color: var(--color-text-light);
+.selection-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-primary-light);
+  font-weight: 400;
 }
 
-.cv-builder-content {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: var(--spacing-lg);
-}
-
-.cv-form-container {
-  background: var(--color-surface);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-}
-
-.form-section {
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-lg);
-  border-bottom: 2px solid var(--color-border);
-}
-
-.form-section:last-child {
-  border-bottom: none;
-}
-
-.form-section-title {
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-md);
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-md);
-}
-
-.add-button {
-  padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--color-background);
-  color: var(--color-primary);
-  border: 2px dashed var(--color-primary);
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.add-button:hover {
-  background: var(--color-primary);
-  color: white;
-  border-style: solid;
-}
-
-.form-actions {
+/* CV Templates Container with proper flexbox layout */
+.cv-templates-container {
   display: flex;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
-.preview-button {
+/* CV Template Card with enhanced hover effects */
+.cv-template-card {
   flex: 1;
-  padding: var(--spacing-md);
-  background: var(--color-background);
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
-  border-radius: var(--radius-sm);
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
+  min-width: 320px;
+  max-width: 480px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 40px 30px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+  border: 2px solid transparent;
+}
+
+.cv-template-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+/* Template Preview Area with proper dimensions */
+.template-preview {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.template-image-placeholder {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #e8f4ff 0%, #d0e8ff 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 3px solid var(--color-border);
   transition: all var(--transition-normal);
 }
 
-.preview-button:hover {
+.cv-template-card:hover .template-image-placeholder {
+  background: linear-gradient(135deg, #d0e8ff 0%, #b3d9f2 100%);
+  border-color: var(--color-primary-light);
+}
+
+.template-icon {
+  width: 80px;
+  height: 80px;
+  color: var(--color-primary);
+  transition: all var(--transition-normal);
+}
+
+.cv-template-card:hover .template-icon {
+  transform: scale(1.15) rotate(5deg);
+  color: var(--color-primary-light);
+}
+
+.preview-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+/* Template Title and Description with proper typography */
+.template-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.template-description {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+/* Template Action Buttons with consistent styling */
+.template-actions {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.template-button {
+  flex: 1;
+  padding: 14px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all var(--transition-normal);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.preview-btn {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.preview-btn:hover {
   background: var(--color-primary);
   color: white;
-}
-
-.cv-preview-container {
-  background: var(--color-surface);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-  position: sticky;
-  top: 100px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
 }
 
-.cv-preview-header {
-  text-align: center;
-  padding: var(--spacing-lg);
-  color: var(--color-text-light);
+.select-btn {
+  background: var(--color-primary);
+  color: white;
+  border: 2px solid var(--color-primary);
 }
 
-.cv-preview-content {
-  padding: var(--spacing-md);
+.select-btn:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ===== Animations ===== */
@@ -990,234 +1047,24 @@ body {
 
   .mission-vision-grid,
   .opportunities-grid,
-  .contact-grid,
-  .cv-builder-content {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
   .logo-large {
     margin-bottom: var(--spacing-md);
   }
-
-  .cv-preview-container {
-    position: static;
-    max-height: none;
-  }
 }
 
-@media (max-width: 640px) {
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    height: 80vh;
-  }
-
-  .team-grid,
-  .videos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-actions {
-    flex-direction: column;
-  }
-
-  /* ============================================
-   CV TEMPLATE SELECTION PAGE STYLES
-   Add these styles to your main css/styles.css file
-   ============================================ */
-
-/* CV Template Selection Section */
-.cv-template-selection {
-  min-height: calc(100vh - 80px);
-  padding: 120px 0 80px;
-  background: linear-gradient(135deg, #f8fbff 0%, #e8f4ff 100%);
-}
-
-.cv-selection-header {
-  text-align: center;
-  margin-bottom: 60px;
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.industry-title {
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #004976;
-  margin-bottom: 16px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.selection-subtitle {
-  font-size: 1.25rem;
-  color: #0066a1;
-  font-weight: 400;
-}
-
-/* CV Templates Container */
-.cv-templates-container {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* CV Template Card */
-.cv-template-card {
-  flex: 1;
-  min-width: 320px;
-  max-width: 450px;
-  background: white;
-  border-radius: 20px;
-  padding: 40px 30px;
-  box-shadow: 0 10px 40px rgba(0, 73, 118, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.cv-template-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 60px rgba(0, 73, 118, 0.2);
-}
-
-/* Template Preview Area */
-.template-preview {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.template-image-placeholder {
-  width: 100%;
-  height: 280px;
-  background: linear-gradient(135deg, #e8f4ff 0%, #d0e8ff 100%);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  border: 3px solid #b3d9f2;
-  transition: all 0.3s ease;
-}
-
-.cv-template-card:hover .template-image-placeholder {
-  background: linear-gradient(135deg, #d0e8ff 0%, #b3d9f2 100%);
-  border-color: #0066a1;
-}
-
-.template-icon {
-  width: 80px;
-  height: 80px;
-  color: #004976;
-  transition: all 0.3s ease;
-}
-
-.cv-template-card:hover .template-icon {
-  transform: scale(1.1);
-  color: #0066a1;
-}
-
-.preview-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #004976;
-  letter-spacing: 1px;
-}
-
-/* Template Title and Description */
-.template-title {
-  font-family: "Playfair Display", serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #004976;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-.template-description {
-  font-size: 1rem;
-  color: #0066a1;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  padding: 0 10px;
-}
-
-/* Template Action Buttons */
-.template-actions {
-  display: flex;
-  gap: 15px;
-  width: 100%;
-}
-
-.template-button {
-  flex: 1;
-  padding: 14px 24px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-}
-
-.preview-btn {
-  background: white;
-  color: #004976;
-  border: 2px solid #004976;
-}
-
-.preview-btn:hover {
-  background: #004976;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 73, 118, 0.3);
-}
-
-.select-btn {
-  background: #004976;
-  color: white;
-  border: 2px solid #004976;
-}
-
-.select-btn:hover {
-  background: #003d5c;
-  border-color: #003d5c;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 73, 118, 0.4);
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
+  /* Responsive adjustments for CV template selection */
   .cv-template-selection {
     padding: 100px 0 60px;
   }
 
   .industry-title {
     font-size: 2rem;
+    letter-spacing: 1px;
   }
 
   .selection-subtitle {
@@ -1259,10 +1106,22 @@ body {
   }
 }
 
+@media (max-width: 640px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .team-grid,
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 480px) {
+  /* Mobile optimizations for CV template selection */
   .industry-title {
     font-size: 1.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   }
 
   .cv-template-card {
@@ -1271,5 +1130,14 @@ body {
 
   .template-image-placeholder {
     height: 180px;
+  }
+
+  .template-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .preview-text {
+    font-size: 1.1rem;
   }
 }
