@@ -44,27 +44,29 @@
 
             <div class="cv-templates-container">
                 <!-- Beginner CV Template -->
-               <div class="cv-template-card">
+         <div class="cv-template-card">
   <div class="template-preview">
-    <div class="template-image">
-      <img
-        src="images/beginner-cv.png"
-        alt="Beginner CV template preview"
-        loading="lazy"
-        width="800" height="600"
-      />
-      <span class="preview-text">BEGINNER CV</span>
+    <!-- INNER CONTAINER -->
+    <div class="template-image-placeholder" id="beginner-preview" role="button"
+         aria-label="Choose preview image for Beginner CV" tabindex="0">
+      <img id="beginner-img"
+           src="images/beginner-cv.jpg"           <!-- <- your default image path -->
+           alt="Beginner CV template preview"
+           class="template-image">
+      <button type="button" class="change-image">Change image</button>
+      <input id="upload-beginner" type="file" accept="image/*" hidden>
     </div>
+  </div>
+
+  <h3 class="template-title">BEGINNER CV</h3>
+  <p class="template-description">Perfect for entry-level positions and recent graduates</p>
+  <div class="template-actions">
+    <a href="#preview-beginner" class="template-button preview-btn">PREVIEW</a>
+    <a href="#select-beginner" class="template-button select-btn">SELECT</a>
   </div>
 </div>
 
-                    <h3 class="template-title">BEGINNER CV</h3>
-                    <p class="template-description">Perfect for entry-level positions and recent graduates</p>
-                    <div class="template-actions">
-                        <a href="#preview-beginner" class="template-button preview-btn">PREVIEW</a>
-                        <a href="#select-beginner" class="template-button select-btn">SELECT</a>
-                    </div>
-                </div>
+            
                  <div class="cv-template-card">
                     <div class="template-preview">
                         <div class="template-image-placeholder">
