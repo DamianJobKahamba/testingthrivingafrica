@@ -787,6 +787,15 @@ body {
   text-align: center;
 }
 
+/* Make footer content span the full viewport width */
+.footer > .container {
+  max-width: none;
+  width: 100%;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+
 .footer-content {
   display: flex;
   flex-direction: column;
