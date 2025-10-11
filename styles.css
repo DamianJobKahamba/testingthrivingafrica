@@ -1115,6 +1115,7 @@ body {
   .videos-grid {
     grid-template-columns: 1fr;
   }
+}
 
 @media (max-width: 480px) {
   /* Mobile optimizations for CV template selection */
