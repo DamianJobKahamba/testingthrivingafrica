@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzania Opportunity Hub - Our Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="logo">
+                <img src="thriving-africa-logo.png" alt="Tanzania Opportunity Hub Logo" class="logo-image">
+                <span class="logo-text">Tanzania Opportunity Hub</span>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#opportunities" class="nav-link">Opportunities</a></li>
+                <li><a href="videos.html" class="nav-link">Videos</a></li>
+                <li><a href="teams.html" class="nav-link active">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-link">Register</a></li>
+                <li><a href="build-cv2.html" class="nav-link nav-link-special">Build CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="team-page-header">
+        <div class="container">
+            <h1 class="section-heading">Our Team</h1>
+            <p class="section-description">Meet the people behind Tanzania Opportunity Hub</p>
+        </div>
+    </section>
+
+    <section class="founder" id="founder">
+        <div class="container">
+            <div class="founder-card founder-card-v2">
+                <h2 class="founder-title">Founder</h2>
+
+                <!-- Replace founder.jpg with your own image file (square photo recommended).
+                     The image is clickable and opens the full photo in a new tab. -->
+                <a class="founder-photo-link" href="founder.jpg" target="_blank" rel="noopener">
+                    <img src="founder.jpg" alt="Founder photo">
+                </a>
+
+                <div class="founder-text">
+                    <p class="founder-name"><strong>Chokamamba</strong></p>
+
+                    <!-- Replace this with your real founder bio -->
+                    <p class="founder-bio">
+                        Write the founder information here. This is where you can explain who you are, your mission,
+                        and why Tanzania Opportunity Hub exists.
+                    </p>
+
+                    <!-- Replace the href with your profile link (PDF, LinkedIn, or another page) -->
+                    <a class="founder-more" href="founder-profile.pdf" target="_blank" rel="noopener">
+                        More information →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-heading">Meet Our Team</h2>
+            <p class="section-description">LinkedIn professionals committed to your success</p>
+
+            <!-- Filters -->
+            <div class="team-controls">
+                <input id="teamSearch" type="text" placeholder="Search team member..." autocomplete="off" />
+                <select id="countryFilter">
+                    <option value="all">All countries</option>
+                </select>
+                <select id="specialtyFilter">
+                    <option value="all">All specialties</option>
+                </select>
+            </div>
+
+            <p class="team-status" id="teamStatus">Loading team members…</p>
+            <div class="team-grid" id="teamGrid"></div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-heading">Get In Touch</h2>
+            <p class="section-description">Ready to start your journey? We're here to help</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Connect With Us</h3>
+                    <p class="contact-info-text">Have questions? Reach out through any of our channels and we'll get back to you within 24 hours.</p>
+                    <div class="social-links">
+                        <a href="mailto:info@africanopportunities.com" class="social-link" title="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Email Us</span>
+                        </a>
+                        <a href="https://wa.me/+18503003550" class="social-link" title="WhatsApp" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://instagram.com/africanopportunities" class="social-link" title="Instagram" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>Tanzania Opportunity Hub</span>
+                </div>
+                <p class="footer-tagline">Empowering Tanzanian talent for global success</p>
+                <p class="footer-copyright">&copy; 2026 Lionheart Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (kept simple so this page doesn't depend on main.js)
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navbar = document.getElementById('navbar');
+
+        if (mobileMenuToggle && navLinks) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked (mobile)
+            navLinks.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => navLinks.classList.remove('active'));
+            });
+        }
+
+        // Navbar scroll shadow
+        window.addEventListener('scroll', () => {
+            if (!navbar) return;
+            if (window.scrollY > 10) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // ===========================
+        // Team members (JSON + filters)
+        // ===========================
+        (async () => {
+            const DATA_URL = 'csvjson.json'; // must be in the same folder as teams.html on GitHub Pages
+
+            const teamGrid = document.getElementById('teamGrid');
+            const statusEl = document.getElementById('teamStatus');
+            const searchEl = document.getElementById('teamSearch');
+            const countryEl = document.getElementById('countryFilter');
+            const specialtyEl = document.getElementById('specialtyFilter');
+
+            if (!teamGrid || !statusEl || !searchEl || !countryEl || !specialtyEl) return;
+
+            const getField = (row, candidates) => {
+                for (const key of candidates) {
+                    if (row && Object.prototype.hasOwnProperty.call(row, key) && row[key] != null && String(row[key]).trim() !== '') {
+                        return String(row[key]).trim();
+                    }
+                }
+                // also try case-insensitive / trimmed key matching
+                const lowerMap = {};
+                Object.keys(row || {}).forEach(k => lowerMap[k.toLowerCase().trim()] = row[k]);
+                for (const key of candidates) {
+                    const v = lowerMap[key.toLowerCase().trim()];
+                    if (v != null && String(v).trim() !== '') return String(v).trim();
+                }
+                return '';
+            };
+
+            const normalize = (row) => {
+                const name = getField(row, ['TEAM MEMBER', 'Team member name', 'Name', 'name']);
+                const country = getField(row, ['COUNTRY', 'Country', 'country']);
+                const specialty = getField(row, ['SPECIALTY', 'Specialty', 'Role', 'role']);
+                const bio = getField(row, ['SHORT INFORMATION', 'Short biography', 'Bio', 'bio']);
+                const image = getField(row, ['LINK TO IMAGE', 'Image', 'image', 'photo', 'Photo URL']);
+                const moreInfo = getField(row, ['MORE INFORMATION LINK', 'More information link', 'LinkedIn', 'LINKEDIN', 'Profile link', 'profile']);
+                return { name, country, specialty, bio, image, moreInfo };
+            };
+
+            const escapeAttr = (s) => String(s || '').replace(/"/g, '&quot;');
+
+            const render = (list) => {
+                teamGrid.innerHTML = '';
+                if (!list.length) {
+                    statusEl.textContent = 'No matching team members.';
+                    return;
+                }
+
+                statusEl.textContent = `${list.length} team member${list.length === 1 ? '' : 's'} found.`;
+
+                list.forEach(member => {
+                    const card = document.createElement('div');
+                    card.className = 'team-card';
+
+                    const imgWrap = document.createElement('div');
+                    imgWrap.className = 'team-image';
+
+                    const img = document.createElement('img');
+                    img.alt = member.name || 'Team member';
+                    img.src = member.image || 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=600&h=600&fit=crop';
+                    imgWrap.appendChild(img);
+
+                    const h3 = document.createElement('h3');
+                    h3.className = 'team-name';
+                    h3.textContent = member.name || 'Team Member';
+
+                    const role = document.createElement('p');
+                    role.className = 'team-role';
+                    const roleBits = [];
+                    if (member.specialty) roleBits.push(member.specialty);
+                    if (member.country) roleBits.push(member.country);
+                    role.textContent = roleBits.join(' • ') || '';
+
+                    const bio = document.createElement('p');
+                    bio.className = 'team-bio';
+                    bio.textContent = member.bio || '';
+
+                    card.appendChild(imgWrap);
+                    card.appendChild(h3);
+                    if (role.textContent) card.appendChild(role);
+                    if (bio.textContent) card.appendChild(bio);
+
+                    if (member.moreInfo) {
+                        const a = document.createElement('a');
+                        a.className = 'team-link';
+                        a.href = member.moreInfo;
+                        a.target = '_blank';
+                        a.rel = 'noopener';
+                        a.textContent = member.moreInfo.includes('linkedin.com') ? 'LinkedIn Profile →' : 'More information →';
+                        card.appendChild(a);
+                    }
+
+                    teamGrid.appendChild(card);
+                });
+            };
+
+            const applyFilters = (allMembers) => {
+                const q = (searchEl.value || '').toLowerCase().trim();
+                const countryVal = (countryEl.value || 'all').toLowerCase();
+                const specialtyVal = (specialtyEl.value || 'all').toLowerCase();
+
+                const filtered = allMembers.filter(m => {
+                    const matchesName = !q || (m.name || '').toLowerCase().includes(q);
+                    const matchesCountry = countryVal === 'all' || (m.country || '').toLowerCase() === countryVal;
+                    const matchesSpecialty = specialtyVal === 'all' || (m.specialty || '').toLowerCase() === specialtyVal;
+                    return matchesName && matchesCountry && matchesSpecialty;
+                });
+
+                render(filtered);
+            };
+
+            try {
+                statusEl.textContent = 'Loading team members…';
+                const res = await fetch(DATA_URL, { cache: 'no-store' });
+
+                if (!res.ok) {
+                    throw new Error(`Fetch failed (${res.status}) for ${DATA_URL}`);
+                }
+
+                const raw = await res.json();
+                const allMembers = (Array.isArray(raw) ? raw : []).map(normalize).filter(m => m.name || m.country || m.bio);
+
+                // Build country options
+                const countries = Array.from(new Set(allMembers.map(m => m.country).filter(Boolean))).sort((a, b) => a.localeCompare(b));
+                countries.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c;
+                    opt.textContent = c;
+                    countryEl.appendChild(opt);
+                });
+
+                
+                // Build specialty options
+                const specialties = Array.from(new Set(allMembers.map(m => m.specialty).filter(Boolean)))
+                    .sort((a, b) => a.localeCompare(b));
+                specialties.forEach(s => {
+                    const opt = document.createElement('option');
+                    opt.value = s;
+                    opt.textContent = s;
+                    specialtyEl.appendChild(opt);
+                });
+// Hook filters
+                searchEl.addEventListener('input', () => applyFilters(allMembers));
+                countryEl.addEventListener('change', () => applyFilters(allMembers));
+                specialtyEl.addEventListener('change', () => applyFilters(allMembers));
+
+                // Initial render
+                applyFilters(allMembers);
+            } catch (err) {
+                console.error(err);
+                statusEl.textContent =
+                    `Could not load team data. Check that "${DATA_URL}" is in the same folder as teams.html and that it opens in the browser.`;
+            }
+        })();
+    </script>
+</body>
+</html>
